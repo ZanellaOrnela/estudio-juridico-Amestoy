@@ -57,7 +57,7 @@ export default function Home() {
                 <h3 className="text-white text-base md:text-lg font-semibold mb-3 md:mb-4">¿Necesitás asesoramiento?</h3>
                 <div className="space-y-2 md:space-y-3 text-gray-200 text-sm md:text-base">
                   <p><strong>Teléfono:</strong> 11-6011-1758</p>
-                  <p><strong>Dirección:</strong> Av. Corrientes 1386 Piso 4 Of 17, CABA</p>
+                    <p><strong>Dirección:</strong> Avenida Corrientes 1386 Piso 4 Oficina 17, CABA</p>
                   <p><strong>Instagram:</strong> @amestoyestudiojuridico</p>
                 </div>
               </div>
@@ -146,7 +146,7 @@ export default function Home() {
               <p className="text-base md:text-lg text-gray-300 font-montserrat">Especialización en Derecho Civil Patrimonial</p>
             </div>
             
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6 lg:gap-8">
               <div className="text-center animate-fade-in-scale delay-100">
                 <div className="w-12 h-12 md:w-16 md:h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4">
                   <span className="text-white text-lg md:text-xl font-bold">R</span>
@@ -184,6 +184,16 @@ export default function Home() {
                 <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4 font-playfair italic">Subastas Judiciales</h3>
                 <p className="text-sm md:text-base text-gray-300 font-montserrat">
                   Asesoramiento y representación en subastas judiciales especializadas.
+                </p>
+              </div>
+              
+              <div className="text-center animate-fade-in-scale delay-500">
+                <div className="w-12 h-12 md:w-16 md:h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4">
+                  <span className="text-white text-lg md:text-xl font-bold">P</span>
+                </div>
+                <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4 font-playfair italic">Derecho Penal</h3>
+                <p className="text-sm md:text-base text-gray-300 font-montserrat">
+                  Defensa penal especializada y asesoramiento en procesos criminales.
                 </p>
               </div>
             </div>
@@ -372,7 +382,7 @@ export default function Home() {
                   </div>
                   <div>
                     <h4 className="font-bold text-gray-900 mb-2 text-base md:text-lg font-montserrat">Dirección</h4>
-                    <p className="text-sm md:text-base text-gray-600 font-montserrat">Avenida Corrientes 1386 Piso 4 Oficina 17, CABA (CP -1043-)</p>
+                    <p className="text-sm md:text-base text-gray-600 font-montserrat">Avenida Corrientes 1386 Piso 4 Oficina 17, CABA</p>
                   </div>
                 </div>
                 
@@ -422,7 +432,7 @@ export default function Home() {
                 ></iframe>
               </div>
               <p className="text-sm md:text-base text-gray-600 font-montserrat">
-                Avenida Corrientes 1386, Piso 4, Oficina 17, CABA
+                Avenida Corrientes 1386 Piso 4 Oficina 17, CABA
               </p>
             </div>
           </div>
@@ -462,7 +472,7 @@ export default function Home() {
               <div className="space-y-2 md:space-y-3">
                 <p className="text-gray-400 font-montserrat flex items-center text-sm md:text-base">
                   <span className="w-4 h-4 md:w-5 md:h-5 bg-gray-600 rounded-full flex items-center justify-center mr-2 md:mr-3 text-xs font-bold">A</span>
-                  Av. Corrientes 1386 Piso 4 Of 17, CABA
+                  Avenida Corrientes 1386 Piso 4 Oficina 17, CABA
                 </p>
                 <p className="text-gray-400 font-montserrat flex items-center text-sm md:text-base">
                   <span className="w-4 h-4 md:w-5 md:h-5 bg-gray-600 rounded-full flex items-center justify-center mr-2 md:mr-3 text-xs font-bold">T</span>
@@ -483,6 +493,7 @@ export default function Home() {
                 <li className="text-gray-300 font-montserrat text-sm md:text-base">• Sucesiones</li>
                 <li className="text-gray-300 font-montserrat text-sm md:text-base">• Divisiones de Condominio</li>
                 <li className="text-gray-300 font-montserrat text-sm md:text-base">• Subastas Judiciales</li>
+                <li className="text-gray-300 font-montserrat text-sm md:text-base">• Derecho Penal</li>
                 <li className="text-gray-300 font-montserrat text-sm md:text-base">• Derecho Civil Patrimonial</li>
               </ul>
             </div>
@@ -498,8 +509,6 @@ export default function Home() {
               <h4 className="text-lg md:text-xl font-bold mb-4 md:mb-6 font-playfair italic">Horarios de Atención</h4>
               <div className="space-y-1 md:space-y-2">
                 <p className="text-gray-300 font-montserrat text-sm md:text-base">Lunes a Viernes: 9:00 - 18:00</p>
-                <p className="text-gray-300 font-montserrat text-sm md:text-base">Sábados: 9:00 - 13:00</p>
-                <p className="text-gray-400 font-montserrat text-xs md:text-sm">Consultas de urgencia disponibles</p>
               </div>
             </div>
           </div>
