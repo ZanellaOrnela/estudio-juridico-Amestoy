@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { AnimatedSection } from "./components/AnimatedSection";
 
 export default function Home() {
   return (
@@ -8,15 +9,16 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex justify-between items-center py-4">
             <a href="#inicio" className="flex items-center">
-              <Image 
-                src="/logo amestoy.png" 
-                alt="Estudio Amestoy & Asociados" 
-                width={300} 
-                height={80} 
-                className="h-12 md:h-16 w-auto object-cover object-center"
-                style={{ objectPosition: 'center 20%' }}
-                priority
-              />
+              <div className="w-40 md:w-56 h-16 md:h-20 overflow-hidden flex items-center justify-center rounded-xl">
+        <Image
+                  src="/logo amestoy.png" 
+                  alt="Estudio Amestoy & Asociados" 
+                  width={300} 
+                  height={80} 
+                  className="w-full h-auto -mt-1 md:-mt-2 -mb-1 md:-mb-2"
+          priority
+        />
+              </div>
             </a>
             <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
               <a href="#inicio" className="text-gray-600 hover:text-gray-800 font-montserrat text-sm lg:text-base">Inicio</a>
@@ -38,7 +40,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section id="inicio" className="px-4 md:px-8 lg:px-12" style={{ marginTop: '8rem' }}>
+      <section id="inicio" className="px-4 md:px-8 lg:px-12" style={{ marginTop: '10rem' }}>
         <div className="modern-hero">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="relative z-10 animate-fade-in-left">
@@ -62,9 +64,9 @@ export default function Home() {
             </div>
             <div className="relative z-10 animate-fade-in-right delay-200 mt-8 md:mt-0">
               <div className="bg-white/10 backdrop-blur-sm rounded-[2rem] p-4 md:p-6 border border-white/20">
-                <h3 className="text-white text-base md:text-lg font-semibold mb-3 md:mb-4">¿Necesitás asesoramiento?</h3>
+                <h3 className="text-white text-base md:text-lg font-semibold mb-3 md:mb-4">¿Necesitas asesoramiento?</h3>
                 <div className="space-y-2 md:space-y-3 text-gray-200 text-sm md:text-base">
-                  <p><strong>Teléfono:</strong> 11-6011-1758</p>
+                  <p><strong>Teléfono:</strong> +54 11 6011-1758</p>
                     <p><strong>Dirección:</strong> Avenida Corrientes 1386 Piso 4 Oficina 17, CABA</p>
                   <p><strong>Instagram:</strong> @amestoyestudiojuridico</p>
                 </div>
@@ -76,19 +78,27 @@ export default function Home() {
 
       {/* About Us Section */}
       <section id="sobre-nosotros" className="py-12 md:py-24">
-        <div className="relative">
+        <AnimatedSection animationClass="opacity-100 translate-y-0" className="relative">
           {/* Imagen izquierda - oculta en móviles */}
-          <div className="hidden lg:block absolute left-0 top-1/2 transform -translate-y-1/2 w-48 h-64 bg-gray-200 rounded-r-[2.5rem] overflow-hidden animate-fade-in-left delay-300">
-            <div className="w-full h-full bg-gradient-to-br from-gray-300 to-gray-400 flex items-center justify-center">
-              <span className="text-gray-600 text-sm font-montserrat">Imagen 1</span>
-            </div>
+          <div className="hidden lg:block absolute left-0 top-1/2 transform -translate-y-1/2 w-48 h-64 rounded-r-[2.5rem] overflow-hidden animate-fade-in-left delay-300">
+            <Image 
+              src="/giammarco-boscaro-zeH-ljawHtg-unsplash.jpg"
+              alt="Lote de libros en estantería de madera negra"
+              width={200}
+              height={300}
+              className="w-full h-full object-cover"
+            />
           </div>
           
           {/* Imagen derecha - oculta en móviles */}
-          <div className="hidden lg:block absolute right-0 top-1/2 transform translate-y-16 w-48 h-64 bg-gray-200 rounded-l-[2.5rem] overflow-hidden animate-fade-in-right delay-400">
-            <div className="w-full h-full bg-gradient-to-br from-gray-300 to-gray-400 flex items-center justify-center">
-              <span className="text-gray-600 text-sm font-montserrat">Imagen 2</span>
-            </div>
+          <div className="hidden lg:block absolute right-0 top-1/2 transform translate-y-16 w-48 h-64 rounded-l-[2.5rem] overflow-hidden animate-fade-in-right delay-400">
+            <Image
+              src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+              alt="Abogado en tribunal de justicia"
+              width={200}
+              height={300}
+              className="w-full h-full object-cover"
+            />
           </div>
           
           {/* Contenido central */}
@@ -142,12 +152,68 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
+        </AnimatedSection>
+      </section>
+
+      {/* Silvina Amestoy Section */}
+      <section className="py-12 md:py-20 bg-white">
+        <AnimatedSection animationClass="opacity-100 translate-y-0" className="max-w-6xl mx-auto px-4 md:px-8 lg:px-12">
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div className="animate-fade-in-left">
+              <div className="relative">
+                <Image 
+                  src="/1609068178084.jpg"
+                  alt="Silvina Amestoy - Abogada"
+                  width={400}
+                  height={500}
+                  className="w-full h-96 md:h-[500px] object-cover rounded-[2.5rem] shadow-lg"
+                />
+              </div>
+            </div>
+            
+            <div className="animate-fade-in-right">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 md:mb-6 font-playfair italic">Silvina Amestoy</h2>
+              <p className="text-lg md:text-xl text-gray-600 mb-4 md:mb-6 font-montserrat">Titular del Estudio Jurídico</p>
+              
+              <div className="space-y-4 md:space-y-6">
+                <p className="text-base md:text-lg text-gray-700 font-montserrat leading-relaxed">
+                  <strong>Magíster en Derecho Civil Patrimonial</strong> por la Pontificia Universidad Católica Argentina (2014-2015) 
+                  y <strong>Abogada con Diploma de Honor</strong> por la Universidad del Salvador (1989-1994). 
+                  Especialista en derechos reales con más de 30 años de experiencia profesional.
+                </p>
+                
+                <p className="text-base md:text-lg text-gray-700 font-montserrat leading-relaxed">
+                  Titular del Estudio Jurídico Amestoy & Asociados desde 1995. Anteriormente se desempeñó como 
+                  <strong> Directora Legal en Infosubastas S.A.</strong> (2009-2019), especializándose en asesoramiento 
+                  para la compra de inmuebles en subastas judiciales y negociación con inmuebles litigiosos.
+                </p>
+                
+                <div className="bg-gray-50 rounded-[2.5rem] p-4 md:p-6">
+                  <h3 className="text-lg md:text-xl font-bold text-gray-800 mb-3 font-playfair italic">Certificaciones</h3>
+                  <p className="text-sm md:text-base text-gray-600 font-montserrat">
+                    • Certificación CAMS - ACAMS<br/>
+                    • Especialista en derechos reales<br/>
+                    • Tesis aprobada en Magíster en Derecho Civil Patrimonial
+                  </p>
+                </div>
+                
+                <div className="flex flex-col sm:flex-row gap-3 md:gap-4 pt-4">
+                  <a href="https://ar.linkedin.com/in/silvina-amestoy-b5161229" target="_blank" rel="noopener noreferrer" className="bg-blue-600 text-white px-4 md:px-6 py-2 md:py-3 font-montserrat hover:bg-blue-700 transition-colors text-sm md:text-base text-center">
+                    Ver perfil en LinkedIn
+                  </a>
+                  <a href="https://wa.me/541160111758?text=Hola%20Silvina,%20me%20interesa%20recibir%20asesoramiento%20legal" target="_blank" rel="noopener noreferrer" className="bg-gray-800 text-white px-4 md:px-6 py-2 md:py-3 font-montserrat hover:bg-gray-700 transition-colors text-sm md:text-base text-center">
+                    Contactar por WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </AnimatedSection>
       </section>
 
       {/* Practice Areas Section */}
       <section id="areas-practica" className="py-12 md:py-20">
-        <div className="max-w-6xl mx-auto px-4 md:px-8 lg:px-12">
+        <AnimatedSection animationClass="opacity-100 translate-y-0" className="max-w-6xl mx-auto px-4 md:px-8 lg:px-12">
           <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-[2.5rem] p-4 md:p-6 lg:p-8 text-white">
             <div className="text-center mb-8 md:mb-12 animate-fade-in-up">
               <h2 className="text-2xl md:text-3xl font-bold mb-3 md:mb-4 font-playfair italic">Áreas de práctica</h2>
@@ -210,7 +276,7 @@ export default function Home() {
               <div className="bg-white/10 backdrop-blur-sm rounded-[2.5rem] p-4 md:p-6 border border-white/20 inline-block">
                 <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4 font-playfair italic">¿Su caso no figura?</h3>
                 <p className="text-sm md:text-base text-gray-300 mb-4 md:mb-6 font-montserrat">
-                  Contanos tu situación: evaluamos la viabilidad legal y definimos los próximos pasos sin tecnicismos.
+                  Cuéntanos tu situación: evaluamos la viabilidad legal y definimos los próximos pasos sin tecnicismos.
                 </p>
                 <a href="#contacto" className="bg-white text-gray-800 px-4 md:px-6 py-2 md:py-3 font-montserrat hover:bg-gray-200 transition-colors text-sm md:text-base">
                   Consultar mi caso
@@ -218,12 +284,12 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
+        </AnimatedSection>
       </section>
 
       {/* Soluciones Legales Eficientes */}
       <section className="py-12 md:py-20 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4 md:px-8 lg:px-12">
+        <AnimatedSection animationClass="opacity-100 translate-y-0" className="max-w-6xl mx-auto px-4 md:px-8 lg:px-12">
           <div className="text-center mb-8 md:mb-16 animate-fade-in-up">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-3 md:mb-4 font-playfair italic">Soluciones Legales Eficientes</h2>
             <p className="text-base md:text-lg text-gray-600 font-montserrat">Enfoque integral para la resolución de conflictos patrimoniales</p>
@@ -257,12 +323,12 @@ export default function Home() {
               </p>
             </div>
           </div>
-        </div>
+        </AnimatedSection>
       </section>
 
       {/* How We Work Section */}
       <section className="py-16 md:py-24 lg:py-32">
-        <div className="max-w-6xl mx-auto px-4 md:px-8 lg:px-12">
+        <AnimatedSection animationClass="opacity-100 translate-y-0" className="max-w-6xl mx-auto px-4 md:px-8 lg:px-12">
           <div className="text-center mb-8 md:mb-12 lg:mb-16 animate-fade-in-up">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-3 md:mb-4 font-playfair italic">Cómo trabajamos</h2>
             <p className="text-base md:text-lg text-gray-600 font-montserrat">Proceso claro y transparente</p>
@@ -309,12 +375,12 @@ export default function Home() {
               </p>
             </div>
           </div>
-        </div>
+        </AnimatedSection>
       </section>
 
       {/* FAQ Section */}
       <section className="py-12 md:py-20">
-        <div className="max-w-4xl mx-auto px-4 md:px-8 lg:px-12">
+        <AnimatedSection animationClass="opacity-100 translate-y-0" className="max-w-4xl mx-auto px-4 md:px-8 lg:px-12">
           <div className="text-center mb-8 md:mb-12 lg:mb-16 animate-fade-in-up">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-3 md:mb-4 font-playfair italic">Preguntas frecuentes</h2>
             <p className="text-base md:text-lg text-gray-600 font-montserrat">Respuestas a las consultas más comunes</p>
@@ -369,12 +435,12 @@ export default function Home() {
               </div>
             </details>
           </div>
-        </div>
+        </AnimatedSection>
       </section>
 
       {/* Contact Section */}
       <section id="contacto" className="py-12 md:py-20">
-        <div className="max-w-6xl mx-auto px-4 md:px-8 lg:px-12">
+        <AnimatedSection animationClass="opacity-100 translate-y-0" className="max-w-6xl mx-auto px-4 md:px-8 lg:px-12">
           <div className="text-center mb-8 md:mb-12 lg:mb-16 animate-fade-in-up">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-3 md:mb-4 font-playfair italic">Ubicación y contacto</h2>
             <p className="text-base md:text-lg text-gray-600 font-montserrat">Estamos aquí para ayudarte</p>
@@ -400,7 +466,7 @@ export default function Home() {
                   </div>
                   <div>
                     <h4 className="font-bold text-gray-900 mb-2 text-base md:text-lg font-montserrat">Teléfono</h4>
-                    <p className="text-sm md:text-base text-gray-600 font-montserrat">11-6011-1758</p>
+                    <p className="text-sm md:text-base text-gray-600 font-montserrat">+54 11 6011-1758</p>
                   </div>
                 </div>
                 
@@ -444,35 +510,35 @@ export default function Home() {
               </p>
             </div>
           </div>
-        </div>
+        </AnimatedSection>
       </section>
 
       {/* Final CTA Section */}
       <section className="py-12 md:py-20">
-        <div className="max-w-4xl mx-auto px-4 md:px-8 lg:px-12">
-          <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-[2.5rem] p-6 md:p-8 lg:p-12 text-white text-center animate-fade-in-scale delay-100">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6 font-playfair italic">Recupere su patrimonio. Empecemos hoy.</h2>
+        <AnimatedSection animationClass="opacity-100 translate-y-0" className="max-w-4xl mx-auto px-4 md:px-8 lg:px-12">
+          <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-[2.5rem] p-6 md:p-8 lg:p-12 text-white text-center">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6 font-playfair italic">Recupera tu patrimonio. Empecemos hoy.</h2>
             <p className="text-base md:text-lg lg:text-xl mb-6 md:mb-8 lg:mb-10 text-gray-200 font-montserrat">
-              Contáctenos por teléfono al 11-6011-1758 o envíenos su consulta. Más de 30 años de experiencia en litigación respaldan su caso.
+              Contáctanos por teléfono al +54 11 6011-1758 o envíanos tu consulta. Más de 30 años de experiencia en litigación respaldan tu caso.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">
-              <a href="tel:+541160111758" className="bg-white text-gray-800 px-6 md:px-8 py-3 md:py-4 font-montserrat hover:bg-gray-200 transition-colors text-sm md:text-base">
+              <a href="tel:+541160111758" className="bg-white text-gray-800 px-6 md:px-8 py-3 md:py-4 font-montserrat hover:bg-gray-200 transition-colors text-sm md:text-base animate-fade-in-up delay-200">
                 Llamar ahora
               </a>
-              <a href="#contacto" className="bg-transparent text-white border-2 border-white px-6 md:px-8 py-3 md:py-4 font-montserrat hover:bg-white hover:text-gray-800 transition-colors text-sm md:text-base">
+              <a href="#contacto" className="bg-transparent text-white border-2 border-white px-6 md:px-8 py-3 md:py-4 font-montserrat hover:bg-white hover:text-gray-800 transition-colors text-sm md:text-base animate-fade-in-up delay-300">
                 Enviar consulta
-              </a>
-            </div>
-          </div>
+          </a>
         </div>
+          </div>
+        </AnimatedSection>
       </section>
 
       {/* Footer */}
       <footer className="bg-gray-800 text-white py-8 md:py-12 lg:py-16">
-        <div className="max-w-6xl mx-auto px-4 md:px-8 lg:px-12">
+        <AnimatedSection animationClass="opacity-100 translate-y-0" className="max-w-6xl mx-auto px-4 md:px-8 lg:px-12">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-12 mb-8 md:mb-12">
             {/* Información del Estudio */}
-            <div className="sm:col-span-2 lg:col-span-1">
+            <div className="sm:col-span-2 lg:col-span-1 animate-fade-in-left delay-100">
               <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 font-playfair italic">Estudio Amestoy & Asociados</h3>
               <p className="text-sm md:text-base text-gray-300 mb-4 md:mb-6 font-montserrat">
                 Especialistas en Derecho Civil Patrimonial y recupero de inmuebles con más de 30 años de experiencia en litigación.
@@ -484,7 +550,7 @@ export default function Home() {
                 </p>
                 <p className="text-gray-400 font-montserrat flex items-center text-sm md:text-base">
                   <span className="w-4 h-4 md:w-5 md:h-5 bg-gray-600 rounded-full flex items-center justify-center mr-2 md:mr-3 text-xs font-bold">T</span>
-                  11-6011-1758
+                  +54 11 6011-1758
                 </p>
                 <p className="text-gray-400 font-montserrat flex items-center text-sm md:text-base">
                   <span className="w-4 h-4 md:w-5 md:h-5 bg-gray-600 rounded-full flex items-center justify-center mr-2 md:mr-3 text-xs font-bold">I</span>
@@ -494,7 +560,7 @@ export default function Home() {
             </div>
 
             {/* Áreas de Práctica */}
-            <div>
+            <div className="animate-fade-in-up delay-200">
               <h4 className="text-lg md:text-xl font-bold mb-4 md:mb-6 font-playfair italic">Áreas de Práctica</h4>
               <ul className="space-y-2 md:space-y-3">
                 <li className="text-gray-300 font-montserrat text-sm md:text-base">• Recupero de Inmuebles</li>
@@ -507,7 +573,7 @@ export default function Home() {
             </div>
 
             {/* Cobertura y Horarios */}
-            <div>
+            <div className="animate-fade-in-right delay-300">
               <h4 className="text-lg md:text-xl font-bold mb-4 md:mb-6 font-playfair italic">Cobertura</h4>
               <ul className="space-y-2 md:space-y-3 mb-6 md:mb-8">
                 <li className="text-gray-300 font-montserrat text-sm md:text-base">• Capital Federal (CABA)</li>
@@ -522,7 +588,7 @@ export default function Home() {
           </div>
 
           {/* Línea divisoria y copyright */}
-          <div className="border-t border-gray-700 pt-6 md:pt-8">
+          <div className="border-t border-gray-700 pt-6 md:pt-8 animate-fade-in-up delay-400">
             <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
               <p className="text-gray-400 font-montserrat text-xs md:text-sm text-center md:text-left">
                 © 2024 Estudio Amestoy & Asociados. Todos los derechos reservados.
@@ -540,7 +606,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
+        </AnimatedSection>
       </footer>
 
       {/* WhatsApp Button */}
