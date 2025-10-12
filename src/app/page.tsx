@@ -7,8 +7,15 @@ export default function Home() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex justify-between items-center py-4">
-            <a href="#inicio" className="text-lg md:text-xl font-bold text-gray-800 font-playfair italic">
-              Estudio Amestoy & Asociados
+            <a href="#inicio" className="flex items-center">
+              <Image 
+                src="/logo amestoy.png" 
+                alt="Estudio Amestoy & Asociados" 
+                width={200} 
+                height={60} 
+                className="h-8 md:h-12 w-auto"
+                priority
+              />
             </a>
             <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
               <a href="#inicio" className="text-gray-600 hover:text-gray-800 font-montserrat text-sm lg:text-base">Inicio</a>
@@ -465,7 +472,15 @@ export default function Home() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-12 mb-8 md:mb-12">
             {/* Información del Estudio */}
             <div className="sm:col-span-2 lg:col-span-1">
-              <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 font-playfair italic">Estudio Amestoy & Asociados</h3>
+              <div className="mb-4 md:mb-6">
+                <Image 
+                  src="/logo amestoy.png" 
+                  alt="Estudio Amestoy & Asociados" 
+                  width={250} 
+                  height={75} 
+                  className="h-12 md:h-16 w-auto"
+                />
+              </div>
               <p className="text-sm md:text-base text-gray-300 mb-4 md:mb-6 font-montserrat">
                 Especialistas en Derecho Civil Patrimonial y recupero de inmuebles con más de 30 años de experiencia en litigación.
               </p>
