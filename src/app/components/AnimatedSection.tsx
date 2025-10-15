@@ -34,3 +34,8 @@ export const AnimatedSection = ({
     </div>
   );
 };
+
+
+
+
+
